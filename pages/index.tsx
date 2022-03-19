@@ -11,6 +11,8 @@ const Home: NextPage = () => {
         <title>Review form</title>
         <meta name="description" content="My super app review form" />
         <link rel="icon" href="/favicon.ico" />
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet" />
+
       </Head>
 
       <main className={styles.main}>
