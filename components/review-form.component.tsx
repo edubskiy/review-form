@@ -12,6 +12,15 @@ export const ReviewForm = () => {
         <label htmlFor="rate-2" className="fas fa-star"></label>
         <input type="radio" name="rate" id="rate-1" />
         <label htmlFor="rate-1" className="fas fa-star"></label>
+        <form action='#'>
+          <header></header>
+          <div className="textarea">
+            <textarea cols={30} placeholder="Describe your experience..."></textarea>
+          </div>
+          <div className="btn">
+            <button type="submit">Send feedback</button>
+          </div>
+        </form>
       </div>    
     </div>
   );
