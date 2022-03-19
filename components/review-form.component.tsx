@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import { rates } from "./review-form.config";
 
 export const ReviewForm = () => {
-  const [ rateHovered, setRateHovered ] = useState<Number | null>(null);
-  const [ rateSelected, setRateSelected ] = useState<Number | null>(null);
+  const [ rateHovered, setRateHovered ] = useState<number | null>(null);
+  const [ rateSelected, setRateSelected ] = useState<number | null>(null);
   const [ feedbackSent, setFeedbackSent ] = useState<Boolean>(false);
   
   return (
@@ -13,22 +13,19 @@ export const ReviewForm = () => {
             <div className="text">Thanks for your rating!</div>
             <div className="edit" onClick={() => setFeedbackSent(false)}>EDIT</div>
           </div>
-        : <div className="start-widget">
-            {rates.map((rate, i) => {
-              console.log("rendering rate 2" , rate);
-              
-              // const rate = ratesMap[rateKey];
-              // const checked = rateSelected !== null && rate.value <= rateSelected;
-              const checked = rateSelected === rate.value;
-              console.log("checked" , checked);
-              // if (checked) debugger;
+        : <div className={`start-widget ${rates.length === rateSelected ? 'all-checked' : ''}`}>
+            {rates.map((rate, i) => {              
+              const checked = rateSelected !== null && rate.value <= rateSelected;
+
               return (
-                <React.Fragment key={rate.name}>
-                  <input 
+                <span key={rate.name}>
+                  <input
+                    className={checked ? 'checked' : ''}
                     type="radio" 
                     name="rate" 
                     checked={checked} 
                     id={rate.name} 
+                    onChange={() => {}}
                     onClick={() => {
                       setRateSelected(rate.value);
                     }} 
@@ -37,14 +34,14 @@ export const ReviewForm = () => {
                     onMouseOut={() => setRateHovered(null)} 
                     onMouseOver={() => setRateHovered(rate.value)} 
                     htmlFor={rate.name} 
-                    className={`fas fa-star ${rateHovered !== null && rate.value <= rateHovered ? 'hovered' : null}`}
+                    className={`fas fa-star ${rateHovered !== null && rate.value <= rateHovered ? 'hovered' : ''}`}
                   ></label>
-                </React.Fragment>
+                </span>
               )  
             })}
             {rateSelected 
               ? <form action='#'>
-                  <header></header>
+                  <header>{rates[rateSelected - 1].text}</header>
                   <div className="textarea">
                     <textarea cols={30} placeholder="Describe your experience..."></textarea>
                   </div>

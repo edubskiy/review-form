@@ -30,34 +30,19 @@
 } */
 
 .start-widget .hovered,
-input:checked ~ label {
+.start-widget .checked ~ label {
   color: #fd4;
 }
 
-input#rate-5:checked ~ label {
+.start-widget.all-checked {
   color: #fe7;
   text-shadow: 0 0 20px #952;
 }
 
-input#rate-1:checked ~ form header:before {
-  content: "Hate it 😠"
-}
-
-input#rate-2:checked ~ form header:before {
-  content: "Very bad 😩"
-}
-
-input#rate-3:checked ~ form header:before {
-  content: "It is ok 😐"
-}
-
-input#rate-4:checked ~ form header:before {
-  content: "Very good 😀"
-}
-
-input#rate-5:checked ~ form header:before {
-  content: "Love it! 😍"
-}
+/* input#rate-5:checked ~ label {
+  color: #fe7;
+  text-shadow: 0 0 20px #952;
+} */
 
 /* .review-form-container form {
   display: none;
