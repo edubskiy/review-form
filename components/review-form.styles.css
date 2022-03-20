@@ -39,15 +39,6 @@
   text-shadow: 0 0 20px #952;
 }
 
-/* input#rate-5:checked ~ label {
-  color: #fe7;
-  text-shadow: 0 0 20px #952;
-} */
-
-/* .review-form-container form {
-  display: none;
-} */
-
 .review-form-container .text {
   font-size: 22px;
   color: #666;
@@ -63,10 +54,6 @@
   top: 5px;
   cursor: pointer;
 }
-
-/* input:checked ~ form {
-  display: block;
-} */
 
 form header {
   width: 100%;
@@ -119,7 +106,3 @@ form .btn button {
 form .btn button:hover {
   background: #1b1b1b;
 }
-
-/* .review-form-container .post {
-  display: none;
-} */
