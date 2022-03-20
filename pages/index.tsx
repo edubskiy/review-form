@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
-import { ReviewForm } from '../components/review-form.component'
+import { ReviewForm } from '../components/review-form/review-form.component'
 import styles from '../styles/Home.module.css'
 
 const Home: NextPage = () => {
