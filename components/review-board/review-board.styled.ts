@@ -5,8 +5,28 @@ export const ReviewBoardContainer = styled.div`
   display: flex;
   width: 400px;
   border: 1px solid #444;
-  padding: 10px 0;
+  padding-top: 10px 0;
   flex-direction: column;
+  color: #fff;
+`;
+
+export const ReviewBoardStarContainer = styled.div`
+  margin-left: 16px;
+`;
+
+export const ReviewBoardHeader = styled.h2`
+  margin: 0;
+  margin-left: 12px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+`;
+
+export const ReviewBoardSubHeader = styled.div`
+  margin-left: 12px;
+  display: flex;
+  justify-content: flex-start;
+  opacity: 0.7;
 `;
 
 export const ReviewBoardBarContainer = styled.div`
