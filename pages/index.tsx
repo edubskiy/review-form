@@ -5,7 +5,7 @@ import { ReviewBoard } from '../components/review-board/review-board.component';
 import { ReviewComments } from '../components/review-comments/review-comments.component';
 import { ReviewForm } from '../components/review-form/review-form.component';
 import styles from '../styles/Home.module.css';
-import { SizedBox, Space } from './api/index.styles';
+import { SizedBox, SizedBoxXS, Space, TextXL } from './api/index.styles';
 
 const Home: NextPage = () => {
   return (
@@ -19,7 +19,11 @@ const Home: NextPage = () => {
       <main className={styles.main}>
         <ReviewBoard />
         <SizedBox />
+        <SizedBox />
+        <TextXL>How do you like our product?</TextXL>
+        <SizedBoxXS />
         <ReviewForm />
+        <SizedBox />
         <SizedBox />
         <ReviewComments />
       </main>
