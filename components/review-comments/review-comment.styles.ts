@@ -10,6 +10,8 @@ export const ReviewCommentsContainer = styled.div`
 `;
 
 export const ReviewCommentsCard = styled.div`
+  display: flex;
+  flex-direction: column;
   width: 400px;
   box-shadow: 2px 3px 30px rgba(0, 0, 0, 0.1);
   padding: 20px;
