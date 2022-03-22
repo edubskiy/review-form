@@ -42,6 +42,7 @@ export const ReviewComments = () => {
                 {Array.from({ length: 5 }).map((o, i) => {
                   return (
                     <div
+                      key={`stars-${review.id}`}
                       className={`fa${i < review.score ? 's' : 'r'} fa-star`}
                     ></div>
                   );

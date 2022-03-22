@@ -1,4 +1,5 @@
 export interface ReviewCommentItem {
+  id: number;
   image: string;
   userName: string;
   userSocial: string;
