@@ -33,6 +33,7 @@ export const ReviewCommentsCardBody = styled.div`
 export const ReviewCommentsCardProfile = styled.div`
   display: flex;
   align-items: center;
+  text-align: left;
 `;
 
 export const ReviewCommentsCardProfileImageContainer = styled.div`
