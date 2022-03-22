@@ -1,6 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
+import { ReviewComments } from '../components/review-comments/review-comments.component'
 import { ReviewForm } from '../components/review-form/review-form.component'
 import styles from '../styles/Home.module.css'
 
@@ -17,6 +18,7 @@ const Home: NextPage = () => {
 
       <main className={styles.main}>
         <ReviewForm />
+        <ReviewComments />
       </main>
 
       <footer className={styles.footer}>

@@ -1,6 +1,6 @@
 import '../styles/globals.css'
 import '../styles/all.css'
-import '../components/review-form/review-form.styles.css'
+// import '../components/review-form/review-form.styles.css'
 
 import type { AppProps } from 'next/app'
 

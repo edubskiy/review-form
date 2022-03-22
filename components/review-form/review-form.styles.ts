@@ -1,4 +1,7 @@
-.review-form-container {
+import styled, { ThemedStyledFunction } from 'styled-components';
+import { StarsLabelProps } from './review-form.types';
+
+export const Container = styled.div`
   position: relative;
   width: 400px;
   color: #111;
@@ -9,43 +12,15 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-}
+`;
 
-.review-form-container .start-widget input {
-  display: none;
-}
-
-.start-widget label {
-  font-size: 40px;
-  color: #444;
-  padding: 10px;
-  flex-direction: row;
-  text-align:right;
-  transition: all 0.2s ease;
-}
-
-/* .start-widget input:not(:checked) ~ label:hover,
-.start-widget input:not(:checked) ~ label:hover ~ label {
-  color: #fd4;
-} */
-
-.start-widget .hovered,
-.start-widget .checked ~ label {
-  color: #fd4;
-}
-
-.start-widget.all-checked {
-  color: #fe7;
-  text-shadow: 0 0 20px #952;
-}
-
-.review-form-container .text {
+export const ReviewText = styled.div`
   font-size: 22px;
   color: #666;
   font-weight: 500;
-}
+`;
 
-.review-form-container .edit {
+export const ReviewEdit = styled.div`
   font-size: 16px;
   color: #666;
   font-weight: 500;
@@ -53,9 +28,27 @@
   right: 10px;
   top: 5px;
   cursor: pointer;
-}
+`;
 
-form header {
+export const StarsContainer = styled.form``;
+
+export const StarsLabel = styled.label<StarsLabelProps>`
+  font-size: 40px;
+  color: ${(props: StarsLabelProps) =>
+    props.checked || props.hovered ? '#fd4' : '#444'};
+  padding: 10px;
+  flex-direction: row;
+  text-align: right;
+  transition: all 0.2s ease;
+`;
+
+export const StarsInput = styled.input`
+  display: none;
+`;
+
+export const ReviewFormContainer = styled.form``;
+
+export const ReviewFormHeader = styled.form`
   width: 100%;
   font-size: 25px;
   color: #fe7;
@@ -63,16 +56,16 @@ form header {
   margin: 5px 0 20px 0;
   text-align: center;
   transition: all 0.2 ease;
-}
+`;
 
-form .textarea {
+export const TextareaContainer = styled.div`
   height: 100px;
   width: 100%;
   overflow: hidden;
   border-radius: 5px;
-}
+`;
 
-form .textarea textarea {
+export const Textarea = styled.textarea`
   height: 100%;
   width: 100%;
   outline: none;
@@ -82,15 +75,15 @@ form .textarea textarea {
   padding: 10px;
   font-size: 17px;
   resize: none;
-}
+`;
 
-form .btn {
+export const ReviewFormButtonContainer = styled.div`
   height: 45px;
   width: 100%;
   margin: 15px 0;
-}
+`;
 
-form .btn button {
+export const ReviewFormButton = styled.button`
   height: 100%;
   width: 100%;
   border: 1px solid #444;
@@ -101,8 +94,8 @@ form .btn button {
   font-weight: 500;
   text-transform: uppercase;
   cursor: pointer;
-}
 
-form .btn button:hover {
-  background: #1b1b1b;
-}
+  &:hover {
+    background: #1b1b1b;
+  }
+`;
