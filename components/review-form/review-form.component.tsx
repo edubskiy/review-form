@@ -19,6 +19,7 @@ export const ReviewForm = () => {
   const [rateHovered, setRateHovered] = useState<number | null>(null);
   const [rateSelected, setRateSelected] = useState<number | null>(null);
   const [feedbackSent, setFeedbackSent] = useState<Boolean>(false);
+  const [userFeedbackText, setUserFeedbackText] = useState<string | null>(null);
 
   return (
     <Container>
@@ -65,13 +66,18 @@ export const ReviewForm = () => {
               </ReviewFormHeader>
               <TextareaContainer>
                 <Textarea
+                  onChange={(e) => {
+                    setUserFeedbackText(e.currentTarget.value);
+                  }}
                   cols={30}
-                  placeholder='Describe your experience...'
+                  placeholder='Share your experience...'
                 ></Textarea>
               </TextareaContainer>
               <ReviewFormButtonContainer
                 className='btn'
-                onClick={() => setFeedbackSent(true)}
+                onClick={() => {
+                  setFeedbackSent(true);
+                }}
               >
                 <ReviewFormButton type='submit'>Send feedback</ReviewFormButton>
               </ReviewFormButtonContainer>
