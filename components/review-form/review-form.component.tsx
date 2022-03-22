@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { SizedBoxXS, TextXL } from '../../pages/api/index.styles';
 import { rates } from './review-form.config';
 import {
   Container,
@@ -30,6 +31,8 @@ export const ReviewForm = () => {
         </div>
       ) : (
         <StarsContainer className={`stars`}>
+          <TextXL>How do you like our product?</TextXL>
+          <SizedBoxXS />
           {rates.map((rate, i) => {
             const checked = rateSelected !== null && rate.value <= rateSelected;
             const hovered = Boolean(

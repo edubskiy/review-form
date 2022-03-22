@@ -8,6 +8,7 @@ export const ReviewBoardContainer = styled.div`
   padding-top: 10px 0;
   flex-direction: column;
   color: #fff;
+  padding: 12px;
 `;
 
 export const ReviewBoardStarContainer = styled.div`
@@ -65,7 +66,7 @@ export const ReviewBoardItemLeft = styled.div`
 
 export const ReviewBoardItemMiddle = styled.div`
   display: flex;
-  width: 250px;
+  width: 225px;
   /* border: 1px solid white; */
 `;
 

@@ -20,8 +20,6 @@ const Home: NextPage = () => {
         <ReviewBoard />
         <SizedBox />
         <SizedBox />
-        <TextXL>How do you like our product?</TextXL>
-        <SizedBoxXS />
         <ReviewForm />
         <SizedBox />
         <SizedBox />
