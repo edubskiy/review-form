@@ -17,10 +17,10 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
-        <ReviewBoard />
-        <SizedBox />
-        <SizedBox />
         <ReviewForm />
+        <SizedBox />
+        <SizedBox />
+        <ReviewBoard />
         <SizedBox />
         <SizedBox />
         <ReviewComments />
