@@ -5,7 +5,7 @@ import { ReviewBoard } from '../components/review-board/review-board.component';
 import { ReviewComments } from '../components/review-comments/review-comments.component';
 import { ReviewForm } from '../components/review-form/review-form.component';
 import styles from '../styles/Home.module.css';
-import { SizedBox, SizedBoxXS, Space, TextXL } from './api/index.styles';
+import { SizedBox } from './api/index.styles';
 
 const Home: NextPage = () => {
   return (
