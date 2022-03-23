@@ -19,7 +19,7 @@ export const ReviewComments = () => {
     <ReviewCommentsContainer>
       {reviews.map((review) => {
         return (
-          <ReviewCommentsCard>
+          <ReviewCommentsCard key={review.id}>
             <ReviewCommentsCardHead>
               <ReviewCommentsCardProfile>
                 <ReviewCommentsCardProfileImageContainer>
